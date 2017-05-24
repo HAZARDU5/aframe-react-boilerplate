@@ -15,8 +15,21 @@ npm install
 npm start
 ```
 
+OR
+
+```bash
+yarn install
+yarn start
+```
+
 To publish to GitHub Pages:
 
 ```bash
 npm run publish
+```
+
+OR
+
+```bash
+yarn run publish
 ```
