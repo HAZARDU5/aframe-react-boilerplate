@@ -17,8 +17,13 @@ const render = Component => {
 render(App);
 
 if (module.hot) {
+    console.log('*** Hot reloading active ***');
     module.hot.accept('./scss/main.scss', () => {
+        console.log('*** Hot reloading CSS now ***');
         require('./scss/main.scss');
     });
-    module.hot.accept('./components/App', () => { render(App) })
+    module.hot.accept('./components/App', () => {
+        console.log('*** Hot reloading app now ***');
+        render(App)
+    })
 }
