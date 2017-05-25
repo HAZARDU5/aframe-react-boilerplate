@@ -16,7 +16,7 @@
   "scripts": {
     "start": "concurrently -r -k \"yarn run watch:css\" \"yarn run serve\"",
     "serve": "react-scripts start --hot",
-    "build": "react-scripts build",
+    "build": "yarn run build:css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "publish": "yarn run build && gh-pages -d build",
