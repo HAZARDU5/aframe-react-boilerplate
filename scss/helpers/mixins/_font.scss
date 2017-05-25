@@ -1,0 +1,18 @@
+/*  Quick font
+    Example usage:
+    1. @include font(16px, 24px, -0.2px, bold);
+    2. @include font(14px, 16px);
+*/
+
+@mixin font($font-size, $line-height, $letter-spacing: 0px, $font-weight: normal){
+    font-size: rem($font-size);
+    font-weight: $font-weight;
+    letter-spacing: #{($letter-spacing / $font-size)}em;
+
+    @if unitless($line-height) { 
+        line-height: #{$line-height}; 
+    }
+    @else { 
+        line-height: #{($line-height / $font-size)}; 
+    }
+}

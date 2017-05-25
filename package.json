@@ -14,11 +14,14 @@
     "react-scripts": "0.9.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently -r -k \"yarn run watch:css\" \"yarn run serve\"",
+    "serve": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "publish": "npm run build && gh-pages -d build"
+    "publish": "yarn run build && gh-pages -d build",
+    "build:css": "node-sass scss -o public/assets/css",
+    "watch:css": "yarn run build:css && node-sass scss -o public/assets/css --watch"
   },
   "repository": {
     "type": "git",
@@ -42,6 +45,9 @@
   },
   "homepage": "https://github.com/ngokevin/aframe-react-boilerplate#readme",
   "devDependencies": {
-    "gh-pages": "^0.12.0"
+    "concurrently": "^3.4.0",
+    "gh-pages": "^0.12.0",
+    "node-sass": "^4.5.3",
+    "react-hot-loader": "3.0.0-beta.7"
   }
 }

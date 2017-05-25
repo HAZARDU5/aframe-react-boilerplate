@@ -1,0 +1,15 @@
+@mixin button-primary() {
+    width: 200px;
+    height: 20px;
+    background-color: $c-accent;
+    text-align: center;
+    color: $c-text-light;
+}
+
+@mixin button-secondaty() {
+    width: 150px;
+    height: 40px;
+    background-color: $c-social;
+    text-align: center;
+    color: $c-text-light;
+}

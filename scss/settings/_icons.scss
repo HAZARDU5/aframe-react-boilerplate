@@ -1,0 +1,60 @@
+/* Example usage:
+    1. <div class="icon-tick"></div>
+    2.  font-family: $font-icons;
+        content: map-get($icons, 'tick');
+*/
+$font-icons: 'icomoon';
+
+$icons: (
+    'vimeo':                    "\e910",
+    'arrow-down':               "\e900",
+    'arrow-left':               "\e901",
+    'arrow-long-down':          "\e902",
+    'arrow-long-fat-down':      "\e903",
+    'arrow-long-fat-left':      "\e904",
+    'arrow-long-fat-right':     "\e905",
+    'arrow-long-fat-top':       "\e906",
+    'arrow-long-left':          "\e907",
+    'arrow-long-right':         "\e908",
+    'arrow-long-top':           "\e909",
+    'arrow-right':              "\e90a",
+    'arrow-thin-down':          "\e90b",
+    'arrow-thin-left':          "\e90c",
+    'arrow-thin-right':         "\e90d",
+    'arrow-thin-top':           "\e90e",
+    'arrow-top':                "\e90f",
+    'cross-short':              "\e912",
+    'cross':                    "\e913",
+    'dot':                      "\e914",
+    'facebook':                 "\e915",
+    'globe':                    "\e916",
+    'googleplus':               "\e917",
+    'linkedin':                 "\e918",
+    'location':                 "\e919",
+    'pen-down-left':            "\e91a",
+    'pen-down':                 "\e91b",
+    'search':                   "\e91d",
+    'tick':                     "\e91e",
+    'time':                     "\e91f",
+    'twitter':                  "\e920",
+    'youtube':                  "\e924",
+    'arrow-top-right':          "\e922",
+    'attachment':               "\e923",
+    'burger':                   "\e911",
+    'scroll-down':              "\e91c",
+    'instagram':                "\e921"
+);
+
+//--- Generates classes
+@each $name, $value in $icons {
+    .icon-#{$name}:before { content: $value; }
+}
+
+[class^="icon-"], [class*=" icon-"] { 
+    font-family: $font-icons !important;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}

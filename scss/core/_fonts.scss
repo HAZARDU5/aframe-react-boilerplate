@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Font name';
+    font-weight: normal;
+    font-style: 400;
+    src: url('font.woff2') format('woff2'),
+         url('myfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Font name';
+    font-style: normal;
+    font-weight: 700;
+    src: url('font.woff2') format('woff2'),
+         url('myfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+    src:
+        url('../../fonts/icomoon.ttf') format('truetype'),
+        url('../../fonts/icomoon.woff') format('woff');
+}
+
+
