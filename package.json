@@ -14,12 +14,14 @@
     "react-scripts": "0.9.5"
   },
   "scripts": {
-    "start": "yarn run serve",
-    "serve": "react-scripts start",
+    "start": "concurrently -r -k \"yarn run watch:css\" \"yarn run serve\"",
+    "serve": "react-scripts start --hot",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "publish": "yarn run build && gh-pages -d build"
+    "publish": "yarn run build && gh-pages -d build",
+    "build:css": "node-sass src/scss -o public/assets/css",
+    "watch:css": "yarn run build:css && node-sass src/scss -o public/assets/css --watch"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-require("react-hot-loader/patch") //must come first
+require("react-hot-loader/patch"); //must come first
 
 import React from 'react';
 import ReactDOM from 'react-dom';
