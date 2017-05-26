@@ -3,4 +3,4 @@ npm-debug.log
 *.sw[ponm]
 gh-pages
 build
-public/assets/css/*
+src/css/*
