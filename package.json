@@ -16,12 +16,13 @@
   "scripts": {
     "start": "concurrently -r -k \"yarn run watch:css\" \"yarn run serve\"",
     "serve": "react-scripts start --hot",
-    "build": "yarn run build:css && react-scripts build",
+    "build": "yarn run build:css:prod && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "publish": "yarn run build && gh-pages -d build",
-    "build:css": "node-sass src/scss -o public/assets/css",
-    "watch:css": "yarn run build:css && node-sass src/scss -o public/assets/css --watch"
+    "build:css:dev": "node-sass src/scss -o src/css --source-map true --source-map-embed true",
+    "build:css:prod": "node-sass src/scss -o src/css",
+    "watch:css": "yarn run build:css:dev && node-sass src/scss -o src/css --watch"
   },
   "repository": {
     "type": "git",
