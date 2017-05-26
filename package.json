@@ -48,7 +48,6 @@
   "devDependencies": {
     "concurrently": "^3.4.0",
     "gh-pages": "^0.12.0",
-    "node-sass": "^4.5.3",
-    "react-hot-loader": "3.0.0-beta.7"
+    "node-sass": "^4.5.3"
   }
 }
